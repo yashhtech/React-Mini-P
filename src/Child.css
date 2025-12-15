@@ -1,0 +1,136 @@
+/* GLOBAL */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    background: linear-gradient(135deg, #dff1ff, #e9e2ff, #ffe8f0);
+    padding: 40px;
+    animation: bgMove 15s infinite alternate ease-in-out;
+}
+
+/* Smooth gradient animation */
+@keyframes bgMove {
+    0% { background-position: left top; }
+    100% { background-position: right bottom; }
+}
+
+/* MAIN CONTAINER */
+.productcontainer {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+/* PRODUCT BOX */
+.productbox {
+    width: 240px;
+    background: linear-gradient(180deg, #ffffff, #f7f7ff);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(0,0,0,0.15);
+    padding: 18px;
+    text-align: center;
+    
+    transition: 0.4s ease-in-out;
+    position: relative;
+    overflow: hidden;
+    border: 2px solid transparent;
+}
+
+.productbox:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 15px 32px rgba(0,0,0,0.2);
+    border-color: #7ab7ff;
+}
+
+/* Floating glow effect */
+.productbox::before {
+    content: "";
+    position: absolute;
+    width: 140%;
+    height: 120%;
+    top: -40%;
+    left: -20%;
+    background: radial-gradient(circle, rgba(0,123,255,0.2), transparent 60%);
+    transform: rotate(20deg);
+    transition: 1s;
+}
+
+.productbox:hover::before {
+    top: -10%;
+    left: -5%;
+}
+
+/* IMAGE */
+.productbox img {
+    width: 100%;
+    border-radius: 12px;
+    transition: 0.5s ease;
+}
+
+.productbox:hover img {
+    transform: scale(1.08);
+}
+
+/* TEXT */
+.desc {
+    color: #444;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.price {
+    font-weight: bold;
+    font-size: 20px;
+    color: #0033aa;
+    margin-bottom: 14px;
+    text-shadow: 0px 0px 3px rgba(0, 102, 255, 0.2);
+}
+
+/* BUTTON GROUP */
+.btngroup {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* BUTTON BASE */
+.btn {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: 0.25s ease;
+}
+
+/* ADD TO CART BUTTON */
+.add {
+    background: linear-gradient(90deg, #ffe0ab, #ffc46b);
+    color: #5a3a00;
+    box-shadow: 0 4px 10px rgba(255,179,0,0.3);
+}
+
+.add:hover {
+    background: linear-gradient(90deg, #ffcc70, #ffa928);
+    transform: translateY(-3px);
+}
+
+/* BUY NOW BUTTON */
+.buy {
+    background: linear-gradient(90deg, #0077ff, #00d0ff);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,140,255,0.4);
+}
+
+.buy:hover {
+    background: linear-gradient(90deg, #005ce6, #00b5e6);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 520px) {
+    .productcontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
