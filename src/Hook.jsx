@@ -20,9 +20,9 @@ const Hook = () => {
   const Reset = () => setCount(0);
 
   return (
-    <div className="min-h-screen w-full flex items-center justify-center bg-gradient-to-r from-amber-300 via-orange-300 to-yellow-300">
+    <div className="min-h-screen w-full flex items-center justify-center bg-linear-to-r from-amber-300 via-orange-300 to-yellow-300">
       
-      <div className="bg-white rounded-2xl shadow-2xl p-8 w-[340px] text-center space-y-6">
+      <div className="bg-white rounded-2xl shadow-2xl p-8 w-85 text-center space-y-6">
         
         <h1 className="text-3xl font-bold text-gray-800">
           useState Counter
