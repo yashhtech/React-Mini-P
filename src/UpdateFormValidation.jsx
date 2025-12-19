@@ -120,7 +120,7 @@ const UpdateFormValidation = () => {
           )}
         </div>
 
-        {/* PASSWORD */}
+     
         <div className="mb-2">
           <input
             type="password"
