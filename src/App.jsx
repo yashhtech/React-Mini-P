@@ -37,11 +37,11 @@ let App=()=> {
 
     <>
       
-     <h1>My Products</h1>
+     
       <Child data={products}/>
 
     </>
   )
 }
 
-export default 
+export default App
