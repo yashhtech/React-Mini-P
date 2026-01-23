@@ -1,0 +1,10 @@
+{
+   "flight" : [
+    {
+         "name":"yash",
+         "age":24,
+         "email":"yash15778753x@gmail.com",
+          "city":"bhopal"
+    }
+   ]
+}
